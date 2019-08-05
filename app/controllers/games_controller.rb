@@ -14,5 +14,6 @@ class GamesController < ApplicationController
     uri = URI(url)
     response = Net::HTTP.get(uri)
     @response = JSON.parse(response)
+    @score = 0
   end
 end

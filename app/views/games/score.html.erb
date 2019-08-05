@@ -2,7 +2,7 @@
 <p><%= @word.join('') %></p>
 <p><%= @generated_letters.join(', ') %></p>
 
-<% if (@word.all?{ |letter| @generated_letters.include?(letter.upcase)}) %>
+<% if (@word.all? { |letter| @generated_letters.include?(letter.upcase)}) %>
   <% if @response["found"] == true %>
     <p>Congratulations <%= @word.join('') %> is a valid English word!</p>
   <% else %>
