@@ -7,16 +7,21 @@
 }
 
 .letter {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   border: 1px solid black;
   display: inline-block;
   text-align: center;
+  background-color: lightblue;
 }
 
 span {
+  line-height: 60px;
   display: inline-block;
   vertical-align: middle;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
 }
 
 
