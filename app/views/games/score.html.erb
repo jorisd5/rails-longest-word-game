@@ -1,0 +1,17 @@
+<h1>Results</h1>
+<p><%= @word.join('') %></p>
+<p><%= @generated_letters.join(', ') %></p>
+
+
+<% if (@word.all?{ |letter| @generated_letters.include?(letter.upcase)}) %>
+  <% if @response["found"] == true %>
+    <p>Congratulations <%= @word.join('') %> is a valid English word!</p>
+  <% else %>
+    <p><%= @word.join('') %> can be built from <%= @generated_letters.join(', ') %></p>
+  <% end %>
+<% else %>
+  <p>Sorry, <%= @word.join('') %> can't be build out of <%= @generated_letters.join(', ') %></p>
+%>
+<% end %>
+
+
